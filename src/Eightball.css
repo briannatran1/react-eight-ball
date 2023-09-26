@@ -1,0 +1,26 @@
+.Eightball {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.Eightball-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.Eightball:hover {
+  cursor: pointer;
+}
+
+.Eightball-background {
+  display: flex;
+  justify-content: center;
+}
