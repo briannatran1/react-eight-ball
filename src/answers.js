@@ -1,4 +1,4 @@
-
+// possible answers the eightball can give
 const answers = [
   { msg: "It is certain.", color: "green" },
   { msg: "It is decidedly so.", color: "green" },
