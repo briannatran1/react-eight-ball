@@ -7,7 +7,7 @@ import './Eightball.css';
 /**
  * props:
  * answers
- * ex: [{msg: "this is your fate"...}]
+ * ex: [{msg: "this is your fate", color: 'red'}...]
  *
  * states:
  * color
@@ -16,20 +16,21 @@ import './Eightball.css';
  * components:
  * Eightball
  */
+
+// can use default value for answers
 function Eightball({ answers }) {
   const [color, setColor] = useState('black');
   const [message, setMessage] = useState('Think of a Question.');
-  const randomAnswer = getRandom(answers);
 
   /** changes state of color */
-  console.log(`our random answer is`, randomAnswer);
-  function handleClick(evt){
+  function handleClick(evt) {
+    const randomAnswer = getRandom(answers);
     setColor(randomAnswer.color);
     setMessage(randomAnswer.msg);
   }
 
   return (
-    <div className='Eightball' style= {{backgroundColor: `${ color }`}} >
+    <div className='Eightball' style={{ backgroundColor: color }} >
       <p className='Eightball-message' onClick={handleClick} >{message}</p>
     </div>
   );
